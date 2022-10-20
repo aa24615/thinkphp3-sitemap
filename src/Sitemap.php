@@ -14,7 +14,7 @@ class Sitemap
     protected $baseUrl = '';
     public function __construct($baseUrl)
     {
-        $this->baseUrl = rtrim($baseUrl.'/').'/';
+        $this->baseUrl = rtrim($baseUrl,'/').'/';
         $this->path = './sitemap/';
     }
 
