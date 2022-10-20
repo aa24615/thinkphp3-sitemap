@@ -19,10 +19,14 @@ class Sitemap
     }
 
     protected function getTable(){
+
         return M($this->tableName);
     }
 
     public function table(string $tableName){
+        $this->where = [];
+        $this->field = [];
+        $this->url = null;
         $this->tableName = $tableName;
         return $this;
     }
