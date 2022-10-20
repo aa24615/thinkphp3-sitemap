@@ -28,7 +28,7 @@ class Sitemap
     }
 
     public function where(array $where){
-        $this->where[] = $where;
+        $this->where = $where;
         return $this;
     }
 
