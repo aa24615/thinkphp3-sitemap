@@ -58,7 +58,7 @@ class Sitemap
 
         while ($i<=$p){
             $url = [];
-            $list = $this->getTable()->where($this->where)->field(join(',',$this->field))->limit(($i-1)*50000,$i*50000)->select();
+            $list = $this->getTable()->where($this->where)->field(join(',',$this->field))->page($i,50000)->select();
             foreach ($list as $val){
                 $url[] = $this->getUrl($val);
             }
